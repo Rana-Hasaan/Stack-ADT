@@ -37,13 +37,13 @@ public:
 		}
 	}
 
-
+//deletes
 	~Stack()
 	{
 		delete[] stack;
 	}
 
-
+//check emptiness
 	bool isEmpty()
 	{
 		return top == -1;
@@ -55,7 +55,7 @@ public:
 		return top == capacity - 1;
 	}
 
-
+//pushes into stack
 	void push(T eln)
 	{
 		if (isFull())
@@ -65,7 +65,7 @@ public:
 		stack[++top] = eln;
 	}
 
-
+//returns top
 	T Top()
 	{
 		if (!isEmpty())
@@ -78,7 +78,7 @@ public:
 		}
 	}
 
-
+//pops the elem
 	T pop()
 	{
 		if (!isEmpty())
@@ -90,12 +90,12 @@ public:
 			exit(0);
 		}
 	}
-
+//this tells the capacity
 	int getCapacity()
 	{
 		return capacity;
 	}
-
+//uppermost
 	int getTop()
 	{
 		return top;
